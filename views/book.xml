@@ -1,0 +1,11 @@
+<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
+	<menuitem id="book_first_level" name="First level">
+			<menuitem id="book_menu_action" action="book_model_action" />
+	</menuitem>
+</menuitem>
+
+
+
+<!--
+<field name="fields_Editing"</field>
+-->
