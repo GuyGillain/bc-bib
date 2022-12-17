@@ -2,7 +2,7 @@
     "name": "Module de gestion d/'un catalogue de livres",
     "category": "Stock",
     "Version": "15.0.0",
-    "author": "BURNIAUX CONSULTING",
+    "author": "Delire - Gillain - Varlet",
     "website": "",
     "depends": ["base"],
     "date":
