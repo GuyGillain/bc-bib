@@ -5,7 +5,7 @@ class BookModel(models.Model):
     _name = "book.model"
     _description = "Model concernant les livres"
 
-    fields_Title = fields.char(
+    fields_Title = fields.Char(
         string="Titre",
         require="True",
         help="Le titre du livre",
