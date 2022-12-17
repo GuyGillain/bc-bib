@@ -12,7 +12,7 @@
 <record id="book_model_action" model="ir.actions.act.window">
 	<field name="name">Book</field>
 	<field name="res_model">book.model</field>
-	<field name="view_model">tree, form, kanban</field>
+	<field name="view_model">tree, form</field>
 </record>
 
 <record id="book_model_form_view" model="ir.ui.view">
