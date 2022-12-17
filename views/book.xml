@@ -3,7 +3,7 @@
 	<data>
 		<record id="book_model_form_view" model="ir.ui.view">
 			<field name="name">book.model.form</field>
-			<field name="model">book.model</field>
+			<field name="model">book</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Book Model">
@@ -15,7 +15,7 @@
 
 		<record id="book_model_tree_view" model="ir.ui.view">
 			<field name="name">book.model.tree</field>
-			<field name="model">book.model</field>
+			<field name="model">book</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Book Model">
@@ -26,7 +26,7 @@
 
 		<record id="book_model_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
-			<field name="res_model">book.model</field>
+			<field name="res_model">book</field>
 			<field name="view_model">tree, form</field>
 		</record>
 
