@@ -28,15 +28,21 @@
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="BookModel">
-					<field name="fields_Title"/>
-					<field name="fields_Screen_cover"/>
-					<field name="fields_Publishing_date"/>
-					<field name="fields_Editing"/>
-					<field name="fields_Page_count"/>
-					<field name="fields_Bar_code"/>
-					<field name="fields_ISBN"/>
-					<field name="fields_Format"/>
-					<field name="fields_Pice"/>
+					<sheet>
+					<group>
+						<field name="fields_Title"/>
+						<field name="fields_Screen_cover"/>
+						<field name="fields_Publishing_date"/>
+						<field name="fields_Editing"/>
+					</group>
+					<group>
+						<field name="fields_Page_count"/>
+						<field name="fields_Bar_code"/>
+						<field name="fields_ISBN"/>
+						<field name="fields_Format"/>
+						<field name="fields_Pice"/>
+					</group>
+					</sheet>
 				</form>
 			</field>
 		</record>
@@ -50,7 +56,7 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
+		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'>
 			<menuitem id="book_first_level" name="First level">
 					<menuitem id="book_menu_action" action="book_model_action" />
 			</menuitem>
