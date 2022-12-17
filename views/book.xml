@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 	<data>
-
-		<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
-			<menuitem id="book_first_level" name="First level">
-					<menuitem id="book_menu_action" action="book_model_action" />
-			</menuitem>
-		</menuitem>
-
-
-
-
 		<record id="book_model_action" model="ir.actions.act.window">
 			<field name="name">Book</field>
 			<field name="res_model">book.model</field>
@@ -39,5 +29,12 @@
 				</tree>
 			</field>
 		</record>
+
+		<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
+			<menuitem id="book_first_level" name="First level">
+					<menuitem id="book_menu_action" action="book_model_action" />
+			</menuitem>
+		</menuitem>
+
 	</data>
 </odoo>
