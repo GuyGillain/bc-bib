@@ -2,7 +2,7 @@
 <odoo>
 	<data>
 		<record id="book_model_form_view" model="ir.ui.view">
-			<field name="name">book.model.form</field>
+			<field name="name">book.form</field>
 			<field name="model">book</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
@@ -22,7 +22,7 @@
 
 
 		<record id="book_model_tree_view" model="ir.ui.view">
-			<field name="name">book.model.tree</field>
+			<field name="name">book.tree</field>
 			<field name="model">book</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
