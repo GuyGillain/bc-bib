@@ -12,7 +12,18 @@
 <record id="book_model_action" model="ir.actions.act.window">
 	<field name="name">Book</field>
 	<field name="res_model">book.model</field>
-	<field name="view_model">tree, form, kanaban</field>
+	<field name="view_model">tree, form, kanban</field>
+</record>
+
+<record id="book_model_form_view" model="ir.ui.view">
+	<field name="name">book.model.form</field>
+	<field name="model">book.model</field>
+	<field name="type">form</field>
+	<field name="arch" type="xml">
+		<form string="Book Model">
+			<field name="field_name"/>
+		</form>
+	</field>
 </record>
 
 
