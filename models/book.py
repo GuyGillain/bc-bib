@@ -1,8 +1,8 @@
 from odoo import fields, models
 
 
-class book(models.Model):
-    _name = "book"
+class BookModel(models.Model):
+    _name = "book.model"
     _description = "Model concernant les livres"
 
     fields_Title = fields.char(

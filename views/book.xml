@@ -3,10 +3,10 @@
 	<data>
 		<record id="book_model_form_view" model="ir.ui.view">
 			<field name="name">book.form</field>
-			<field name="model">book</field>
+			<field name="model">book.model</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
-				<form string="Book Model">
+				<form string="BookModel">
 					<field name="fields_Title"/>
 					<field name="fields_Screen_cover"/>
 					<field name="fields_Publishing_date"/>
@@ -23,10 +23,10 @@
 
 		<record id="book_model_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
-			<field name="model">book</field>
+			<field name="model">book.model</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="Book Model">
+				<tree string="BookModel">
 					<field name="fields_Title"/>
 					<field name="fields_Screen_cover"/>
 					<field name="fields_Publishing_date"/>
@@ -42,8 +42,8 @@
 
 		<record id="book_model_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
-			<field name="res_model">book</field>
-			<field name="view_model">tree, form</field>
+			<field name="res_model">book.model</field>
+			<field name="view_model">tree,form</field>
 		</record>
 
 		<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
