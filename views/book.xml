@@ -9,3 +9,11 @@
 <!--
 <field name="fields_Editing"</field>
 -->
+<record id="book_model_action" model="ir.actions.act.window">
+	<field name="name">Book</field>
+	<field name="res_model">book.model</field>
+	<field name="view_model">tree, form, kanaban</field>
+</record>
+
+
+
