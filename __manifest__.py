@@ -11,5 +11,5 @@
             'security/ir.model.access.csv',
         ],
     "installable": True,
-
+    'images': ['static/description/icon.png'],
 }
