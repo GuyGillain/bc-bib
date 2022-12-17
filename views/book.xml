@@ -3,11 +3,19 @@
 	<data>
 		<record id="book_model_form_view" model="ir.ui.view">
 			<field name="name">book.model.form</field>
-			<field name="model">book.model</field>
+			<field name="model">book</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Book Model">
-					<field name="book"/>
+					<field name="fields_Title"/>
+					<field name="fields_Screen_cover"/>
+					<field name="fields_Publishing_date"/>
+					<field name="fields_Editing"/>
+					<field name="fields_Page_count"/>
+					<field name="fields_Bar_code"/>
+					<field name="fields_ISBN"/>
+					<field name="fields_Format"/>
+					<field name="fields_Pice"/>
 				</form>
 			</field>
 		</record>
@@ -15,11 +23,19 @@
 
 		<record id="book_model_tree_view" model="ir.ui.view">
 			<field name="name">book.model.tree</field>
-			<field name="model">book.model</field>
+			<field name="model">book</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Book Model">
-					<field name="book"/>
+					<field name="fields_Title"/>
+					<field name="fields_Screen_cover"/>
+					<field name="fields_Publishing_date"/>
+					<field name="fields_Editing"/>
+					<field name="fields_Page_count"/>
+					<field name="fields_Bar_code"/>
+					<field name="fields_ISBN"/>
+					<field name="fields_Format"/>
+					<field name="fields_Pice"/>
 				</tree>
 			</field>
 		</record>
