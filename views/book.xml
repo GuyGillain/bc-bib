@@ -3,11 +3,11 @@
 	<data>
 		<record id="book_model_form_view" model="ir.ui.view">
 			<field name="name">book.model.form</field>
-			<field name="model">book</field>
+			<field name="model">book.model</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Book Model">
-					<field name="field_name"/>
+					<field name="book"/>
 				</form>
 			</field>
 		</record>
@@ -15,11 +15,11 @@
 
 		<record id="book_model_tree_view" model="ir.ui.view">
 			<field name="name">book.model.tree</field>
-			<field name="model">book</field>
+			<field name="model">book.model</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Book Model">
-					<field name="field_name"/>
+					<field name="book"/>
 				</tree>
 			</field>
 		</record>
