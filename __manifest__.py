@@ -5,7 +5,7 @@
     "author": "Delire - Gillain - Varlet",
     "website": "",
     "depends": ["base"],
-    "date":
+    "data":
         [
             'views/book.xml',
             'security/ir.model.access.csv',
