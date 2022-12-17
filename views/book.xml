@@ -27,13 +27,14 @@
 </record>
 
 
-<record id="test_model_tree_view" model="ir.ui.view">
-	<field name="name">test.model.tree</field>
-	<field name="model">test.model</field>
+<record id="book_model_tree_view" model="ir.ui.view">
+	<field name="name">book.model.tree</field>
+	<field name="model">book.model</field>
 	<field name="type">tree</field>
 	<field name="arch" type="xml">
-		<tree string="Test Model">
+		<tree string="Book Model">
 			<field name="field_name"/>
 		</tree>
 	</field>
 </record>
+
