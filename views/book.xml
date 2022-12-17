@@ -2,42 +2,42 @@
 <odoo>
 	<data>
 
-<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
-	<menuitem id="book_first_level" name="First level">
-			<menuitem id="book_menu_action" action="book_model_action" />
-	</menuitem>
-</menuitem>
+		<menuitem id="book_root" name="Book" web_icon='bc-bib, /static/description/icon.png'>
+			<menuitem id="book_first_level" name="First level">
+					<menuitem id="book_menu_action" action="book_model_action" />
+			</menuitem>
+		</menuitem>
 
 
 
 
-<record id="book_model_action" model="ir.actions.act.window">
-	<field name="name">Book</field>
-	<field name="res_model">book.model</field>
-	<field name="view_model">tree, form</field>
-</record>
+		<record id="book_model_action" model="ir.actions.act.window">
+			<field name="name">Book</field>
+			<field name="res_model">book.model</field>
+			<field name="view_model">tree, form</field>
+		</record>
 
-<record id="book_model_form_view" model="ir.ui.view">
-	<field name="name">book.model.form</field>
-	<field name="model">book.model</field>
-	<field name="type">form</field>
-	<field name="arch" type="xml">
-		<form string="Book Model">
-			<field name="field_name"/>
-		</form>
-	</field>
-</record>
+		<record id="book_model_form_view" model="ir.ui.view">
+			<field name="name">book.model.form</field>
+			<field name="model">book.model</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Book Model">
+					<field name="field_name"/>
+				</form>
+			</field>
+		</record>
 
 
-<record id="book_model_tree_view" model="ir.ui.view">
-	<field name="name">book.model.tree</field>
-	<field name="model">book.model</field>
-	<field name="type">tree</field>
-	<field name="arch" type="xml">
-		<tree string="Book Model">
-			<field name="field_name"/>
-		</tree>
-	</field>
-</record>
-</data>
+		<record id="book_model_tree_view" model="ir.ui.view">
+			<field name="name">book.model.tree</field>
+			<field name="model">book.model</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Book Model">
+					<field name="field_name"/>
+				</tree>
+			</field>
+		</record>
+	</data>
 </odoo>
