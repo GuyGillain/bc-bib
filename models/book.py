@@ -38,7 +38,7 @@ class BookModel(models.Model):
     )
 
     fields_Bar_code = fields.Integer(
-        string="code Barre",
+        string="code Barrrrreeee",
         require="True"
     )
 
@@ -57,9 +57,6 @@ class BookModel(models.Model):
     )
 
     fields_Pice = fields.Float(
-        string="Prix",
+        string="Prixxxxxx",
         require="True"
     )
-
-
-    

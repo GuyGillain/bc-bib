@@ -1,5 +1,5 @@
 {
-    "name": "Module de gestion d/'un catalogue de livres",
+    "name": "Module de gestion d\'un catalogue de livres",
     "category": "Stock",
     "Version": "15.0.0",
     "author": "Delire - Gillain - Varlet",
