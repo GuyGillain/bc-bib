@@ -1,7 +1,3 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-<<<<<<< Updated upstream
 bib.book,bib.book,bc-bib.model_book_model,base.group_user,1,1,1,1
-=======
-book_model,book_model,bc-bib.model_book_model,base.group_user,1,1,1,1
 bib_langue,bib_langue,bc-bib.bib_langue,base.group_user,1,1,1,1
->>>>>>> Stashed changes
