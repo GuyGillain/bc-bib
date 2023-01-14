@@ -1,5 +1,5 @@
 from odoo import fields, models
-
+#salut les gars
 
 class BookModel(models.Model):
     _name = "book.model"
