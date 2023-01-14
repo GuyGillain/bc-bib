@@ -58,7 +58,7 @@
 
 		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'>
 			<menuitem id="book_first_level" name="First level">
-					<menuitem id="book_menu_action" action="bib_model_action" />
+					<menuitem id="book_menu_action" action="bib_book_action" />
 			</menuitem>
 		</menuitem>
 
