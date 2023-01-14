@@ -60,3 +60,6 @@ class BookModel(models.Model):
         string="Prixxxxxx",
         require="True"
     )
+
+
+    
