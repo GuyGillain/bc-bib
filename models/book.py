@@ -2,7 +2,7 @@ from odoo import fields, models
 #salut les gars
 
 class BookModel(models.Model):
-    _name = "book.model"
+    _name = "bib.book"
     _description = "Model concernant les livres"
 
     fields_Title = fields.Char(
@@ -38,7 +38,7 @@ class BookModel(models.Model):
     )
 
     fields_Bar_code = fields.Integer(
-        string="code Barrrrreeee",
+        string="code Barre",
         require="True"
     )
 
@@ -57,6 +57,6 @@ class BookModel(models.Model):
     )
 
     fields_Pice = fields.Float(
-        string="Prixxxxxx",
+        string="Prix",
         require="True"
     )

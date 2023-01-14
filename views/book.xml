@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 	<data>
-		<record id="book_model_tree_view" model="ir.ui.view">
+		<record id="bib_book_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
-			<field name="model">book.model</field>
+			<field name="model">bib.book</field>
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="BookModel">
+				<tree string="Book">
 					<field name="fields_Title"/>
 					<field name="fields_Screen_cover"/>
 					<field name="fields_Publishing_date"/>
@@ -22,12 +22,12 @@
 
 
 
-		<record id="book_model_form_view" model="ir.ui.view">
+		<record id="bib_book_form_view" model="ir.ui.view">
 			<field name="name">book.form</field>
-			<field name="model">book.model</field>
+			<field name="model">bib.book</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
-				<form string="BookModel">
+				<form string="Book">
 					<sheet>
 					<group>
 						<field name="fields_Title"/>
@@ -50,9 +50,9 @@
 
 		
 
-		<record id="book_model_action" model="ir.actions.act_window">
+		<record id="bib_book_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
-			<field name="res_model">book.model</field>
+			<field name="res_model">bib.book</field>
 			<field name="view_mode">tree,form</field>
 		</record>
 

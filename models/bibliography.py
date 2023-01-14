@@ -1,6 +1,6 @@
 # Ajout du champ biblio à contact
 class BibliographyModel(res.partner):
-    _name = "bibliography.model"
+    _name = "bib.bibliography"
     _description = "Model pour le bibliographie des auteurs.es"
 
     fields_author = fields.Boolean(
