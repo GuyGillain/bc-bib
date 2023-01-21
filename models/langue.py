@@ -3,9 +3,9 @@ from odoo import fields, models
 class langue(models.Model) :
    
 
-   def _count_number_book(self):
-      for rec in self:
-         rec.count_book = len(rec.ids_book)
+      def _count_number_book(self):
+         for rec in self:
+            rec.count_book = len(rec.ids_book)
 
      _name = "bib.langue"
      _description= "langue"
