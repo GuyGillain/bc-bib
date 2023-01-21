@@ -61,6 +61,7 @@ class BookModel(models.Model):
         require="True"
     )
 
+    
     langue_id = fields.Many2one(
         comodel_name="bib.langue", string="langue"
     )
