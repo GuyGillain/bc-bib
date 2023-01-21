@@ -69,7 +69,7 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
-		<record id="bib_afficher_langue" model="ir.actions.act_window">
+		<record id="bib_book_afficher_langue" model="ir.actions.act_window">
 
 			<field name="name">Langue</field>
 			<!-- Ressource model : bib.langue-->
@@ -82,6 +82,7 @@
 		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'>
 			<menuitem id="book_first_level" name="Boukin">
 					<menuitem id="book_menu_action" action="bib_book_action" />
+					<!--Action !  a lier avec record id = "..."-->
 					<menuitem id="book_menu_langue" action="bib_book_afficher_langue" />
 			</menuitem>
 		</menuitem>
