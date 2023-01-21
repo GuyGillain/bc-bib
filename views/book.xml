@@ -60,6 +60,7 @@
 					<field name="Fields_langue" />
 					<field name="ids_book" />
 				</tree>
+			</field>
 		</record>
 
 		<record id="bib_book_action" model="ir.actions.act_window">
