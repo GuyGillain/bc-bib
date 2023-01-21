@@ -62,6 +62,7 @@
 				<form string="Langue">
 					<field name="Fields_langue" />
 					<field name="ids_book" />
+					<field name="count_book" />
 				</form>
 			</field>
 		</record>
