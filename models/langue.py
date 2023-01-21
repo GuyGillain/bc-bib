@@ -7,7 +7,7 @@ class langue(models.Model) :
       for rec in self:
          rec.count_book = len(rec.ids_book)
 
-   def dummy():
+   def dummy(self):
       return {}
 
    _name = "bib.langue"
