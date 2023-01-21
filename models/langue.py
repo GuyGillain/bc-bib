@@ -9,3 +9,10 @@ class langue(models.Model) :
         string="langue",
         require="True"
      )
+
+     ids_book = fields.One2many(
+      comodel_name="bib.book",
+      inverse_name="langue_id",
+      string="ID des livres"
+      )
+
