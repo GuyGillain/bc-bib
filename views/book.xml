@@ -69,6 +69,8 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+
+		<!-- Record/Action Langue -->
 		<record id="bib_book_afficher_langue" model="ir.actions.act_window">
 
 			<field name="name">Langue</field>
