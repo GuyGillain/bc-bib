@@ -50,7 +50,17 @@
 		</record>
 
 
-		
+		<!-- Vue langue -->
+		<record id="bib_langue_tree" model="ir.ui.view">
+			<field name="name">langue.tree</field>
+			<field name="model">bib.langue</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Langue">
+					<field name="Fields_langue" />
+					<field name="ids_book" />
+				</tree>
+		</record>
 
 		<record id="bib_book_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
@@ -58,9 +68,20 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+		<record id="bib_afficher_langue" model="ir.actions.act_window">
+
+			<field name="name">Langue</field>
+			<!-- Ressource model : bib.langue-->
+			<field name="res_model">bib.langue</field>
+			<!-- View mode (quelle vue on veut afficher sans espace entre les ,)-->
+			<field name="view_mode">tree</field>
+
+		</record>
+
 		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'>
-			<menuitem id="book_first_level" name="First level">
+			<menuitem id="book_first_level" name="Boukin">
 					<menuitem id="book_menu_action" action="bib_book_action" />
+					<menuitem id="book_menu_langue" action="bib_book_afficher_langue" />
 			</menuitem>
 		</menuitem>
 
