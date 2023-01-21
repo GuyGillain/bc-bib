@@ -51,10 +51,11 @@
 
 
 		<!-- Vue langue -->
+		<!-- form -->
 		<record id="bib_langue_form" model="ir.ui.view">
-			<field name="name">langue.tree</field>
+			<field name="name">langue.form</field>
 			<field name="model">bib.langue</field>
-			<field name="type">tree</field>
+			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Langue">
 					<field name="Fields_langue" />
@@ -63,6 +64,20 @@
 			</field>
 		</record>
 
+		<!--Tree-->
+		<record id="bib_langue_tree" model="ir.ui.view">
+			<field name="name">langue.tree</field>
+			<field name="model">bib.langue</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Langue">
+					<field name="Fields_langue" />
+					<field name="ids_book" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- Record/action book -->
 		<record id="bib_book_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
 			<field name="res_model">bib.book</field>
@@ -77,7 +92,7 @@
 			<!-- Ressource model : bib.langue-->
 			<field name="res_model">bib.langue</field>
 			<!-- View mode (quelle vue on veut afficher sans espace entre les ,)-->
-			<field name="view_mode">form</field>
+			<field name="view_mode">tree,form</field>
 
 		</record>
 
