@@ -12,3 +12,4 @@ models/__pycache__/book.cpython-38.pyc
 models/__pycache__/langue.cpython-38.pyc
 *.pyc
 models/__pycache__/langue.cpython-39.pyc
+*.pyc

@@ -1,10 +1,14 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 class langue(models.Model) :
 
+   @api.depends('ids_book')
    def _count_number_book(self):
       for rec in self:
          rec.count_book = len(rec.ids_book)
+
+   def dummy():
+      return {}
 
    _name = "bib.langue"
    _description= "langue"
@@ -23,6 +27,7 @@ class langue(models.Model) :
 
    count_book = fields.Integer(
       string="Nombre de bouquins",
-      compute=_count_number_book
+      compute=_count_number_book,
+      store=True
    )
 
