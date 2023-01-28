@@ -14,7 +14,7 @@ class langue(models.Model) :
       "res_model": "account.move",
       "domain": [],
       "context": {"create": False},
-      "name": _{"Books by languages"},
+      "name": {"Books by languages"},
       "view_mode": "tree,form"
       }
       return {}
