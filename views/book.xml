@@ -63,8 +63,10 @@
 					<sheet>
 						<!-- Smart Button -->
 						<div class="oe_button_box" name="button_box">
-							<!-- Le name du button = nom de la fonction -->
-							<button class="oe_stat_button" name="dummy" type="object" icon="fa-book">
+							<!-- Le name du button = nom de la fonction
+							name="dummy" devient name="books_by_languages"
+							-->
+							<button class="oe_stat_button" name="books_by_languages" type="object" icon="fa-book">
 								<div class="o_stat_info">
 									<span class="o_stat_value">
 										<field name="count_book" />
