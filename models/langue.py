@@ -10,14 +10,17 @@ class langue(models.Model) :
    def dummy(self):
       self.ensure_one()
       result = {
+      # Equivalent query SQL
       "type": "ir.actions.act_window",
-      "res_model": "account.move",
-      "domain": [],
-      "context": {"create": False},
+      # Dans quelle table
+      "res_model": "bib.book",
+      # Clause WHERE
+      "domain": [("langue_id", "=", self.id)],
+
       "name": {"Books by languages"},
       "view_mode": "tree,form"
       }
-      return {}
+      return result
 
    _name = "bib.langue"
    _description= "langue"
