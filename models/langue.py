@@ -8,6 +8,15 @@ class langue(models.Model) :
          rec.count_book = len(rec.ids_book)
 
    def dummy(self):
+      self.ensure_one()
+      result = {
+      "type": "ir.actions.act_window",
+      "res_model": "account.move",
+      "domain": [],
+      "context": {"create": False},
+      "name": _{"Books by languages"},
+      "view_mode": "tree,form"
+      }
       return {}
 
    _name = "bib.langue"
