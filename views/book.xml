@@ -19,6 +19,7 @@
 					<field name="fields_Format"/>
 					<field name="fields_Pice"/>
 					<field name="langue_id"/>
+					<field name="evaluation_id"/>
 				</tree>
 			</field>
 		</record>
