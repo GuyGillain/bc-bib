@@ -66,3 +66,8 @@ class BookModel(models.Model):
         comodel_name="bib.langue", string="langue"
     )
     
+
+    evaluation_id = fields.Many2one(
+        comodel_name="bib.evaluation",
+        string="Evaluation"
+    )
