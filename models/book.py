@@ -61,6 +61,7 @@ class BookModel(models.Model):
         require="True"
     )
 
+
     
     langue_id = fields.Many2one(
         comodel_name="bib.langue", string="langue"
@@ -70,4 +71,9 @@ class BookModel(models.Model):
     evaluation_id = fields.Many2one(
         comodel_name="bib.evaluation",
         string="Evaluation"
+    )
+
+    auteur_ids = fields.Many2many(
+        comodel_name="res.partner",
+        string="Auteur"
     )
