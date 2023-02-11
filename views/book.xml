@@ -22,6 +22,7 @@
 					<field name="fields_Pice"/>
 					<field name="langue_id"/>
 					<field name="evaluation_id"/>
+					<field name="genre_id"/>
 				</tree>
 			</field>
 		</record>
@@ -51,6 +52,11 @@
 					<sheet>
 						<group>
 							<field name="evaluation_id"/>
+						</group>
+					</sheet>
+					<sheet>
+						<group>
+							<field name="genre_id"/>
 						</group>
 					</sheet>
 				</form>

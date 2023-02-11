@@ -10,7 +10,7 @@
 
             <field name="arch" type="xml">
 				<tree string="Genre">
-					<field name="Fields_genre"/>
+					<field name="fields_genre"/>
 				
 				</tree>
 			</field>

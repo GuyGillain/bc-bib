@@ -1,16 +1,16 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 class genre(models.Model) :
    _name = "bib.genre"
    _description= "genre"
-   _rec_name = "Fields_genre"
+   _rec_name = "fields_genre"
    
-   Fields_genre = fields.Char(
+   fields_genre = fields.Char(
         string="genre",
-        require="True"
+        required="True"
    )
    
-   ids_genre = fields.One2many(
+   ids_book = fields.One2many(
       comodel_name="bib.book",
       inverse_name="genre_id",
       string="Genre" # caractere afficher dans la vue

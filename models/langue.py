@@ -29,7 +29,7 @@ class langue(models.Model) :
 
    Fields_langue = fields.Char(
         string="langue",
-        require="True"
+        required="True"
    )
 
    ids_book = fields.One2many(

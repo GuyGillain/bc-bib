@@ -72,3 +72,8 @@ class BookModel(models.Model):
         inverse_name="ids_book",
         string="Evaluation"
     )
+
+    genre_id = fields.Many2one(
+        comodel_name="bib.genre",
+        string="Genre"
+    )
