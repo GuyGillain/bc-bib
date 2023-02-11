@@ -1,5 +1,6 @@
+from odoo import fields, models
 # Ajout du champ biblio à contact
-class BibliographyModel(res.partner):
+class BibliographyModel(models.Models):
     _name = "bib.bibliography"
     _description = "Model pour le bibliographie des auteurs.es"
 
