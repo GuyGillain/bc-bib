@@ -67,7 +67,8 @@ class BookModel(models.Model):
     )
     
 
-    evaluation_id = fields.Many2one(
+    evaluation_id = fields.One2many(
         comodel_name="bib.evaluation",
+        inverse_name="ids_book",
         string="Evaluation"
     )
