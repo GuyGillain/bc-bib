@@ -2,8 +2,8 @@ from odoo import fields, models, api
 
 class langue(models.Model) :
 
-   @api.depends('ids_book')
-   def _count_number_book(self):
+   @api.depends('ids_book') # appeler par la vue, sert a afficher le petit chiffre
+   def _count_number_book(self): #appeler dans la vue, smart bouton pour connaitre le nombre de livre
       for rec in self:
          rec.count_book = len(rec.ids_book)
 

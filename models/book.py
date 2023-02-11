@@ -66,3 +66,7 @@ class BookModel(models.Model):
         comodel_name="bib.langue", string="langue"
     )
     
+
+    genre_id = fields.Many2one(
+        comodel_name="bib.genre", string="Genre"
+    )
