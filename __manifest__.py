@@ -7,6 +7,7 @@
     "depends": ["base"],
     "data":
         [
+            'views/genre.xml',
             'views/book.xml',
             'security/ir.model.access.csv',
         ],

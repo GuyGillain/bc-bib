@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 bc-bib.access_bib_book,access_bib_book,bc-bib.model_bib_book,base.group_user,1,1,1,1
 bc-bib.access_bib_langue,access_bib_langue,bc-bib.model_bib_langue,base.group_user,1,1,1,1
+bc-bib.access_bib_evaluation,access_bib_evaluation,bc-bib.model_bib_evaluation,base.group_user,1,1,1,1
+bc-bib.access_bib_genre,access_bib_genre,bc-bib.model_bib_genre,base.group_user,1,1,1,1
