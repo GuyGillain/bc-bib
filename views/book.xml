@@ -3,6 +3,8 @@
 	<data>
 
 <!-- Vue Book -->
+
+		<!--tree ecran de depart-->
 		<record id="bib_book_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
 			<field name="model">bib.book</field>
@@ -25,7 +27,7 @@
 		</record>
 
 
-
+		<!--form pour créer un livre-->
 		<record id="bib_book_form_view" model="ir.ui.view">
 			<field name="name">book.form</field>
 			<field name="model">bib.book</field>
@@ -125,6 +127,12 @@
 
 		</record>
 
+		<record id="bib_genre_afficher_genre" model="ir.actions.act_window" >
+			<field name="name">Genre</field>
+			<field name="res_model">bib.genre</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
 
 <!-- Menu dans la barre de navigation -->
 		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'>
@@ -132,8 +140,16 @@
 					<menuitem id="book_menu_action" action="bib_book_action" />
 					<!--Action !  a lier avec record id = "..."-->
 					<menuitem id="book_menu_langue" action="bib_book_afficher_langue" />
+
+					
 			</menuitem>
+
+
+
 		</menuitem>
+
+
+		<menuitem id="book_menu_genre" action="bib_genre_afficher_genre" parent="book_first_level" />
 
 	</data>
 </odoo>
