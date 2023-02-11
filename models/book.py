@@ -77,6 +77,7 @@ class BookModel(models.Model):
     genre_id = fields.Many2one(
         comodel_name="bib.genre",
         string="Genre"
+    )
     auteur_ids = fields.Many2many(
         comodel_name="res.partner",
         string="Auteur"

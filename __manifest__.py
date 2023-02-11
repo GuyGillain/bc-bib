@@ -7,8 +7,8 @@
     "depends": ["base"],
     "data":
         [
-            'views/book.xml',
             'views/genre.xml',
+            'views/book.xml',
             'security/ir.model.access.csv',
         ],
     "installable": True,
