@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="bib_genre_tree_view" model="ir.ui.view">
+
+			<field name="name">genre.tree</field>	
+            <field name="model">bib.genre</field>
+			<field name="type">tree</field>
+
+            <field name="arch" type="xml">
+				<tree string="Genre">
+					<field name="Fields_genre"/>
+				
+				</tree>
+			</field>
+		
+		</record>
+
+    </data>
+</odoo>
