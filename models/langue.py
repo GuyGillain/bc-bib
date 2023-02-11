@@ -7,7 +7,8 @@ class langue(models.Model) :
       for rec in self:
          rec.count_book = len(rec.ids_book)
 
-   def dummy(self):
+   def books_by_languages(self):
+      # passage de dummy en books_by_languages
       self.ensure_one()
       result = {
       # Equivalent query SQL
