@@ -12,7 +12,7 @@
 			<field name="arch" type="xml">
 				<tree string="Book">
 					<field name="fields_Title"/>
-					<field name="auteur_ids"/>
+					<field name="auteur_ids" widget="many2many_tags"/>
 					<field name="fields_Screen_cover"/>
 					<field name="fields_Publishing_date"/>
 					<field name="fields_Editing"/>
