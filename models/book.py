@@ -62,9 +62,16 @@ class BookModel(models.Model):
     )
 
 
-    
+    """
     langue_id = fields.Many2one(
         comodel_name="bib.langue", string="langue"
+    )
+    """
+
+    langue_id = fields.Many2one(
+        comodel_name="res.lang",
+        domain=['|', ('active', '=', False), ("active", "=", True)],
+        string="langue"
     )
     
 
