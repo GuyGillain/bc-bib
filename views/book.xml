@@ -65,6 +65,30 @@
 			</field>
 		</record>
 
+		<!--form de recherche -->
+		<record id="bib_book_search" model="ir.ui.view">
+			<field name="name">Book_search</field>
+			<field name="model">bib.book</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search>
+
+					<field name="fields_Title"/>
+					<field name="auteur_ids"/>
+					<field name="fields_Screen_cover"/>
+					<field name="fields_Publishing_date"/>
+					<field name="fields_Editing"/>
+					<field name="fields_Page_count"/>
+					<field name="fields_Bar_code"/>
+					<field name="fields_ISBN"/>
+					<field name="fields_Format"/>
+					<field name="fields_Pice"/>
+					<field name="langue_id"/>
+					
+				</search>
+			</field>
+		</record>
+
 
 <!-- Vue langue -->
 		<!-- form -->
