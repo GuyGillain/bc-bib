@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="bib_shelf_tree_view" model="ir.ui.view">
+
+			<field name="name">shelf.tree</field>
+            <field name="model">bib.shelf</field>
+			<field name="type">tree</field>
+
+            <field name="arch" type="xml">
+				<tree string="Numéro">
+					<field name="fields_Shelf"/>
+
+				</tree>
+			</field>
+
+		</record>
+
+    </data>
+</odoo>
