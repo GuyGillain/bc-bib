@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="bib_localisation_tree_view" model="ir.ui.view">
+
+			<field name="name">localisation.tree</field>
+            <field name="model">bib.localisation</field>
+			<field name="type">tree</field>
+
+            <field name="arch" type="xml">
+				<tree string="Localisation">
+					<field name="fields_Location"/>
+
+				</tree>
+			</field>
+
+		</record>
+
+    </data>
+</odoo>
