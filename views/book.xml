@@ -67,7 +67,7 @@
 
 		<!--form de recherche -->
 		<record id="bib_book_search" model="ir.ui.view">
-			<field name="name">Book_search</field>
+			<field name="name">book.search</field>
 			<field name="model">bib.book</field>
 			<field name="type">search</field>
 			<field name="arch" type="xml">
@@ -110,6 +110,54 @@
 				</search>
 			</field>
 		</record>
+
+
+		<!-- VUE KANBAN -->
+		<record id="bib_book_view_kanban" model="ir.ui.view">
+			<field name="name">book.kanban</field>
+			<field name="model">bib.book</field>
+			<!-- Pas de field type ? -->
+
+			<field name="arch" type="xml">
+				<kanban>
+					<!-- On défini les champs que l'on va utiliser -->
+					<field name="fields_Title"/>
+					<field name="auteur_ids"/>
+					<field name="fields_Publishing_date"/>
+					<field name="langue_id"/>
+
+					<!-- On défini la vue Kanban (ici comment la box sera représentée) -->
+					<templates>
+						<t t-name="kanban-box">
+							<!-- Code HTML5 qui défini la box -->
+							<div class="oe_kanban_global_click">
+								<h2><field name="fields_Title"/></h2>
+
+								<span>
+									Auteur : 
+								</span>
+								<field name="auteur_ids"/>
+								
+								<br/>
+								<span>
+									Date : 
+									<field name="fields_Publishing_date"/>
+								</span>
+
+								<br/>
+								<span>
+									Langue : 
+									<field name="langue_id"/>
+								</span>
+
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+
 
 
 <!-- Vue langue -->
@@ -166,7 +214,7 @@
 		<record id="bib_book_action" model="ir.actions.act_window">
 			<field name="name">Book</field>
 			<field name="res_model">bib.book</field>
-			<field name="view_mode">tree,form</field>
+			<field name="view_mode">kanban,tree,form</field>
 		</record>
 
 
