@@ -65,6 +65,52 @@
 			</field>
 		</record>
 
+		<!--form de recherche -->
+		<record id="bib_book_search" model="ir.ui.view">
+			<field name="name">Book_search</field>
+			<field name="model">bib.book</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search>
+
+					<!-- Rajoute les possibilité de rechercher par d'autres valeurs (par défaut c'est uniquement sur le name) -->
+
+					<field name="fields_Title"/>
+					<field name="auteur_ids"/>
+					<field name="fields_Screen_cover"/>
+					<field name="fields_Publishing_date"/>
+					<field name="fields_Editing"/>
+					<field name="fields_Page_count"/>
+					<field name="fields_Bar_code"/>
+					<field name="fields_ISBN"/>
+					<field name="fields_Format"/>
+					<field name="fields_Pice"/>
+					<field name="langue_id"/>
+
+					<!-- Ajout de filtre perso -->
+					<!-- 
+					Name = nom technique
+					string = ce qui est affiché à l'utilisateur
+					domain = triplet (polish) WHERE de la query
+					-->
+					<filter name="edition2" string="Livres de 2eme édition" domain="[('fields_Editing', '=', '2eme')]"/>
+
+					<!-- Regroupement -->
+
+					<!-- group expand="0" string=... est par défaut et est obligatoire (pas toucher)-->
+					<group expand="0" string="Group By">
+						<!-- Definition des regroupements -->
+						<filter string="Noms" name="name" context="{'group_by': 'fields_Title'}"/>
+						<filter string="Formats" name="format" context="{'group_by': 'fields_Format'}"/>
+					</group>
+
+
+
+
+				</search>
+			</field>
+		</record>
+
 
 <!-- Vue langue -->
 		<!-- form -->
