@@ -73,6 +73,8 @@
 			<field name="arch" type="xml">
 				<search>
 
+					<!-- Rajoute les possibilité de rechercher par d'autres valeurs (par défaut c'est uniquement sur le name) -->
+
 					<field name="fields_Title"/>
 					<field name="auteur_ids"/>
 					<field name="fields_Screen_cover"/>
