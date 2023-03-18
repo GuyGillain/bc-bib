@@ -9,6 +9,8 @@
         [
             'views/genre.xml',
             'views/book.xml',
+            'views/localisation.xml',
+            'views/shelf.xml',
             'security/ir.model.access.csv',
         ],
     "installable": True,

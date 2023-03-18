@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-
+	<!--ecran de depart-->
         <record id="bib_shelf_tree_view" model="ir.ui.view">
-
 			<field name="name">shelf.tree</field>
             <field name="model">bib.shelf</field>
 			<field name="type">tree</field>
-
             <field name="arch" type="xml">
-				<tree string="Numéro">
-					<field name="fields_Shelf"/>
-
+				<tree string="Etagère">
+					<field name="Numéro"/>
 				</tree>
 			</field>
-
 		</record>
+
+	<!--Form pour la création de l'étagère-->
+		<record id="bib_form_shelf" model="ir.ui.view" >
+			<field name="name">shelf.form</field>
+			<field name="model">bib.shelf</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Etagere">
+
+
+
+				</form>
+			</field>
+		</record>	
 
     </data>
 </odoo>

@@ -241,6 +241,12 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+		<record id="bib_shelf_afficher_etagere" model="ir.actions.act_window" > 
+			<field name="name">Etagere </field>
+			<field name="res_model">bib.shelf</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
 
 
 <!-- Menu dans la barre de navigation -->
@@ -249,8 +255,10 @@
 		<menuitem id="book_menu_action" action="bib_book_action" parent="book_first_level" />
 		<menuitem id="book_menu_langue" action="bib_book_afficher_langue" parent="book_first_level"/>
 		<menuitem id="book_menu_genre" action="bib_genre_afficher_genre" parent="book_first_level" />
+		<menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" name="Localité" parent="book_root" />
+		<menuitem id="book_menu_etagere" action="bib_shelf_afficher_etagere" name="Etagere" parent="book_root" />
 		<!-- action lier à la localisation -->
-		<menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" parent="book_first_level"/>
+		<!-- <menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" parent="book_first_level"/> -->
 
 
 
