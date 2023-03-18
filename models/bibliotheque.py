@@ -5,18 +5,18 @@ class Bibliotheque(models.Model):
 	_description = "bibliotheque"
 	_rec_name = "name"
 
-    name = fields.Char(
+	name = fields.Char(
     	string="Bibliotheque",
     	required=True
-    	)
+	)
 
-    shelf_id = fields.One2many(
+	shelf_id = fields.One2many(
     	comodel_name="bib.shelf",
     	inverse_name="ids_biblio",
     	string="Etagère"
-    	)
+	)
 
-    localisation_id = fields.Many2one(
+	localisation_id = fields.Many2one(
     	comodel_name="bib.localisation",
     	string="Localisation"
-    	)
+    )
