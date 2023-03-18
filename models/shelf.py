@@ -13,7 +13,7 @@ class Shelf(models.Model):
         index="True"
     )
 
-    ids_localisation = fields.Many2one(
+    ids_biblio = fields.Many2one(
       comodel_name="bib.localisation",
       inverse_name="shelf_id",
       string="Numéro" # caractere afficher dans la vue
