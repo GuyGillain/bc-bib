@@ -4,9 +4,9 @@ from odoo import fields, models
 class Shelf(models.Model):
     _name = "bib.shelf"
     _description = "Localisation de l'étagère dans la bibliothèque"
-    _rec_name = "fields_Shelf"
+    _rec_name = "Numéro"
 
-    fields_Shelf = fields.Char(
+    Numéro = fields.Char(
         string="Numéro",
         required="True",
         help="Où se trouve l'étagère dans la bibliothèque",
