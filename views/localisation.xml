@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-
+		<!-- Ecran de départ -->
         <record id="bib_localisation_tree_view" model="ir.ui.view">
-
 			<field name="name">localisation.tree</field>
             <field name="model">bib.localisation</field>
 			<field name="type">tree</field>
-
-            <field name="arch" type="xml">
+			<field name="arch" type="xml">
 				<tree string="Localisation">
 					<field name="fields_Location"/>
-
+					<field name="name"/>
+					<field name="fields_Shelf"/>
 				</tree>
 			</field>
+		</record>
+
+		<!-- form pour créer la localisation -->
+		<record id="bib_localisation_form_view" model="ir.ui.view">
+			<field name="name">localisation.form</field>
+			<field name="model">bib.localisation</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form srtring="Localisation">
+					<sheet>
+						<group>
+							<field name="fields_Location"/>
+							<field name="name"/>
+							<field name="fields_Shelf"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<!-- record / Action -->
+		<!-- Record / action Localisation -->
+		<record id="bib_book_afficher_localisation" model="ir.actions.act_window">
+
+			<field name="name">Localisation</field>
+			<!-- Ressource model : bib.localisation-->
+			<field name="res_model">bib.localisation</field>
+			<!-- View mode (quelle vue on veut afficher sans espace entre les ,)-->
+			<field name="view_mode">tree,form</field>
 
 		</record>
 
