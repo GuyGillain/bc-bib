@@ -13,8 +13,8 @@ class Localisation(models.Model):
         index="True"
     )
 
-    ids_shelf = fields.Many2one(
-        comodel_name="bib.shelf",
-        inverse_name="localisation_id",
-        string="Numéro"  # caractere afficher dans la vue
+    count_shelf = fields.Integer(
+        string="Nombre d'étagère",
+        compute=_count_number_book,
+        store=True
     )
