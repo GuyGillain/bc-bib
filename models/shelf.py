@@ -14,7 +14,6 @@ class Shelf(models.Model):
     )
 
     ids_biblio = fields.Many2one(
-      comodel_name="bib.localisation",
-      inverse_name="shelf_id",
+      comodel_name="bib.bibliotheque",
       string="Numéro" # caractere afficher dans la vue
    )

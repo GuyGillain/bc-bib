@@ -3,7 +3,7 @@ from odoo import fields, models
 class Bibliotheque(models.Model):
 	_name="bib.bibliotheque"
 	_description = "bibliotheque"
-    _rec_name = "fields_Location"
+	_rec_name = "name"
 
     name = fields.Char(
     	string="Bibliotheque",
@@ -16,8 +16,7 @@ class Bibliotheque(models.Model):
     	string="Etagère"
     	)
 
-    localisation_ids = fields.Many2one(
+    localisation_id = fields.Many2one(
     	comodel_name="bib.localisation",
-    	inverse_name="ids_biblio",
     	string="Localisation"
     	)

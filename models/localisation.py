@@ -12,15 +12,9 @@ class Localisation(models.Model):
         help="Où se trouve la bibliothèque",
         index="True"
     )
-    """
-    count_shelf = fields.Integer(
-        string="Nombre d'étagère",
-        compute=_count_number_book,
-        store=True
-    )
-    """
+
     ids_biblio = fields.One2many(
-        comodel_name="bib.shelf",
-        inverse_name="localisation_ids",
-        string="Etagère"
+        comodel_name="bib.bibliotheque",
+        inverse_name="localisation_id",
+        string="Bibliotheque"
     )
