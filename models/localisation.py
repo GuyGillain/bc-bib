@@ -19,3 +19,8 @@ class Localisation(models.Model):
         store=True
     )
 """
+    shelf_id = fields.One2many(
+        comodel_name="bib.shelf",
+        inverse_name="ids_localisation",
+        string="Etagère"
+    )
