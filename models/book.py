@@ -89,3 +89,8 @@ class BookModel(models.Model):
         comodel_name="res.partner",
         string="Auteur"
     )
+
+    shelf = fields.Many2one(
+        comodel_name="bib.shelf",
+        string="Etagère"
+    )
