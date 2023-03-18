@@ -12,9 +12,10 @@ class Localisation(models.Model):
         help="Où se trouve la bibliothèque",
         index="True"
     )
-
+"""
     count_shelf = fields.Integer(
         string="Nombre d'étagère",
         compute=_count_number_book,
         store=True
     )
+"""
