@@ -9,7 +9,7 @@
 			<field name="arch" type="xml">
 				<tree string="Localisation">
 					<field name="fields_Location"/>
-					<field name="ids_biblio"/>
+					<field name="counted"/>
 				</tree>
 			</field>
 		</record>
