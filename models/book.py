@@ -61,20 +61,12 @@ class BookModel(models.Model):
         required=True
     )
 
-
-    """
-    langue_id = fields.Many2one(
-        comodel_name="bib.langue", string="langue"
-    )
-    """
-
     langue_id = fields.Many2one(
         comodel_name="res.lang",
         domain=['|', ('active', '=', False), ("active", "=", True)],
         string="langue",
         required=True
     )
-    
 
     evaluation_id = fields.One2many(
         comodel_name="bib.evaluation",

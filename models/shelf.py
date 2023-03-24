@@ -12,10 +12,15 @@ class Shelf(models.Model):
         help="Où se trouve l'étagère dans la bibliothèque",
         index="True"
     )
+    color = fields.Integer(
+        string="Couleur",
+        default=0
+        )
 
     ids_biblio = fields.Many2one(
       comodel_name="bib.bibliotheque",
-      string="Numéro" # caractere afficher dans la vue
+      string="Bibliothèque",
+      required=True
     )
 
     books = fields.One2many(
