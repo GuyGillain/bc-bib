@@ -25,9 +25,9 @@
 				<form string="Etagere">
 					<sheet>
 						<group>
+							<field name="ids_biblio"/>
 							<field name="Numéro"/>
 							<field name="color" widget="color_picker"/>
-							<field name="ids_biblio"/>
 						</group>
 					</sheet>
 

@@ -26,8 +26,8 @@
 				<form string="Bibliothèque">
 					<sheet>
 						<group>
-							<field name="name"/>
 							<field name="localisation_id"/>
+							<field name="name"/>
 							<field name="color" widget="color_picker"/>
 						</group>
 					</sheet>

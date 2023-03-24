@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 #Fichier pour la localisation
 
 class Localisation(models.Model):
