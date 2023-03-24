@@ -9,6 +9,7 @@
             <field name="arch" type="xml">
 				<tree string="Etagère">
 					<field name="Numéro"/>
+					<field name="counted"/>
 					<field name="color" widget="color_picker"/>
 					<field name="ids_biblio"/>
 				</tree>
