@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+<!-- ====================================================================================== Tree -->
+		<record id="bib_bibliotheque_tree_view" model="ir.ui.view">
+			<field name="name">bibliotheque.tree</field>
+			<field name="model">bib.bibliotheque</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Bibliothèque">
+					<field name="name"/>
+					<field name="shelf_id"/>
+					<field name="localisation_id"/>
+				</tree>
+			</field>
+		</record>
+
+<!-- ====================================================================================== Form -->
+		<record id="bib_bibliotheque_form_view" model="ir.ui.view">
+			<field name="name">book.form</field>
+			<field name="model">bib.book</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Bibliothèque">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="shelf_id"/>
+							<field name="localisation_id"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

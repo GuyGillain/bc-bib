@@ -18,5 +18,6 @@ class Bibliotheque(models.Model):
 
 	localisation_id = fields.Many2one(
     	comodel_name="bib.localisation",
-    	string="Localisation"
+    	string="Localisation",
+    	required=True
     )

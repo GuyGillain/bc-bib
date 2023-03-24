@@ -11,6 +11,7 @@
             'views/genre.xml',
             'views/book.xml',
             'views/localisation.xml',
+            'views/library.xml',
             'views/shelf.xml',
             'security/ir.model.access.csv',
         ],

@@ -28,6 +28,11 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 
+		<record id="bib_localisation_afficher_library" model="ir.actions.act_window">
+			<field name="name">Bibliothèque</field>
+			<field name="res_model">bib.bibliotheque</field>
+			<field name="view_mode">tree,form</field>
+		</record>
 
 
 <!-- ================================================================================Menu dans la barre de navigation-->
@@ -39,7 +44,8 @@
 		
 		<menuitem id="book_second_item" name="Localisation" parent="book_root" />
 		<menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" name="Localité" parent="book_second_item" />
-		<menuitem id="book_menu_etagere" action="bib_shelf_afficher_etagere" name="Etagère" parent="book_second_item" />
+		<menuitem id="book_menu_library" action="bib_localisation_afficher_library" name="Bibliothèque" parent="book_second_item"/>
+		<menuitem id="book_menu_etagere" action="bib_shelf_afficher_etagere" name="Etagères" parent="book_second_item" />
 
 
 
