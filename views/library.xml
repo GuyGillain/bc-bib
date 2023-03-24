@@ -18,7 +18,7 @@
 <!-- ====================================================================================== Form -->
 		<record id="bib_bibliotheque_form_view" model="ir.ui.view">
 			<field name="name">book.form</field>
-			<field name="model">bib.book</field>
+			<field name="model">bib.bibliotheque</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Bibliothèque">
