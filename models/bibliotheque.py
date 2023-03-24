@@ -13,11 +13,15 @@ class Bibliotheque(models.Model):
 	shelf_id = fields.One2many(
     	comodel_name="bib.shelf",
     	inverse_name="ids_biblio",
-    	string="Etagère"
+    	string="Etagère(s)"
 	)
 
 	localisation_id = fields.Many2one(
     	comodel_name="bib.localisation",
     	string="Localisation",
     	required=True
+    )
+	color = fields.Integer(
+    	string="Couleur",
+    	default=0
     )

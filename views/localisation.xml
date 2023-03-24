@@ -20,11 +20,10 @@
 			<field name="model">bib.localisation</field>
 			<field name="type">form</field>
 			<field name="arch" type="xml">
-				<form srtring="Localisation">
+				<form string="Localisation">
 					<sheet>
 						<group>
 							<field name="fields_Location"/>
-							<field name="ids_biblio"/>
 						</group>
 					</sheet>
 				</form>

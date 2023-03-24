@@ -11,6 +11,7 @@
 					<field name="name"/>
 					<field name="shelf_id"/>
 					<field name="localisation_id"/>
+					<field name="color"/>
 				</tree>
 			</field>
 		</record>
@@ -25,8 +26,8 @@
 					<sheet>
 						<group>
 							<field name="name"/>
-							<field name="shelf_id"/>
 							<field name="localisation_id"/>
+							<field name="color" widget="color_picker"/>
 						</group>
 					</sheet>
 				</form>
