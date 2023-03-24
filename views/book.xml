@@ -94,6 +94,7 @@
 					<!-- group expand="0" string=... est par défaut et est obligatoire (pas toucher)-->
 					<group expand="0" string="Group By">
 						<!-- Definition des regroupements -->
+						<filter string="Etagères" name="shelf" context="{'group_by': 'shelf'}"/>
 						<filter string="Noms" name="name" context="{'group_by': 'fields_Title'}"/>
 						<filter string="Formats" name="format" context="{'group_by': 'fields_Format'}"/>
 					</group>
