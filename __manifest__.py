@@ -7,6 +7,7 @@
     "depends": ["base"],
     "data":
         [
+            'views/menuitems.xml',
             'views/genre.xml',
             'views/book.xml',
             'views/localisation.xml',
@@ -15,5 +16,6 @@
         ],
     "installable": True,
     'images': ['static/description/icon.png'],
-    "application": True
+    "application": True,
+    "sequence":-100
 }

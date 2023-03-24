@@ -9,10 +9,10 @@ class genre(models.Model) :
         string="genre",
         required="True"
    )
-   
-   ids_book = fields.One2many(
-      comodel_name="bib.book",
-      inverse_name="genre_id",
-      string="Genre" # caractere afficher dans la vue
-   )
 
+   # En utilisant le widget many2many_tags
+   # On peut spécifier une couleur :)
+   color = fields.Integer(
+      string="Couleur du tag",
+      default=0
+      )

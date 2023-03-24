@@ -9,12 +9,28 @@
 			<field name="type">tree</field>
 
             <field name="arch" type="xml">
-				<tree string="Genre">
+				<tree string="Liste des genres">
 					<field name="fields_genre"/>
-				
+					<field name="color" widget="color_picker"/>
 				</tree>
 			</field>
 		
+		</record>
+
+		<record id="bib_genre_tree_view" model="ir.ui.view">
+			<field name="name">genre.tree</field>	
+            <field name="model">bib.genre</field>
+			<field name="type">form</field>
+            <field name="arch" type="xml">
+				<form string="Edition des genres">
+					<sheet>
+						<group>
+							<field name="fields_genre"/>
+							<field name="color" widget="color_picker"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
 		</record>
 
     </data>

@@ -2,9 +2,9 @@
 <odoo>
 	<data>
 
-<!-- Vue Book -->
+<!-- =======================================================================================================Vue Book -->
 
-		<!--tree ecran de depart-->
+		<!--=====================================================================================================TREE-->
 		<record id="bib_book_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
 			<field name="model">bib.book</field>
@@ -14,22 +14,22 @@
 					<field name="fields_Title"/>
 					<field name="auteur_ids" widget="many2many_tags"/>
 					<field name="fields_Screen_cover"/>
+					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 					<field name="fields_Publishing_date"/>
 					<field name="fields_Editing"/>
 					<field name="fields_Page_count"/>
 					<field name="fields_Bar_code"/>
 					<field name="fields_ISBN"/>
-					<field name="fields_Format"/>
+					<field name="fields_Format" widget="badge"/>
 					<field name="fields_Pice"/>
 					<field name="langue_id"/>
-					<field name="evaluation_id"/>
-					<field name="genre_id"/>
+					<field name="evaluation_id" widget="many2many_tags"/>
 				</tree>
 			</field>
 		</record>
 
 
-		<!--form pour créer un livre-->
+		<!--=====================================================================================================FORM-->
 		<record id="bib_book_form_view" model="ir.ui.view">
 			<field name="name">book.form</field>
 			<field name="model">bib.book</field>
@@ -39,33 +39,25 @@
 					<sheet>
 						<group>
 							<field name="fields_Title"/>
-							<field name="auteur_ids"/>
+							<field name="auteur_ids" widget="many2many_tags"/>
 							<field name="fields_Screen_cover"/>
+							<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 							<field name="fields_Publishing_date"/>
 							<field name="fields_Editing"/>
 							<field name="fields_Page_count"/>
 							<field name="fields_Bar_code"/>
 							<field name="fields_ISBN"/>
-							<field name="fields_Format"/>
+							<field name="fields_Format" widget="badge"/>
 							<field name="fields_Pice"/>
 							<field name="langue_id"/>
-						</group>
-					</sheet>
-					<sheet>
-						<group>
-							<field name="evaluation_id"/>
-						</group>
-					</sheet>
-					<sheet>
-						<group>
-							<field name="genre_id"/>
+							<field name="evaluation_id" widget="many2many_tags"/>
 						</group>
 					</sheet>
 				</form>
 			</field>
 		</record>
 
-		<!--form de recherche -->
+		<!--===================================================================================================SEARCH-->
 		<record id="bib_book_search" model="ir.ui.view">
 			<field name="name">book.search</field>
 			<field name="model">bib.book</field>
@@ -73,11 +65,11 @@
 			<field name="arch" type="xml">
 				<search>
 
-					<!-- Rajoute les possibilité de rechercher par d'autres valeurs (par défaut c'est uniquement sur le name) -->
+					<!-- Rajoute les possibilité de rechercher par d'autres valeurs
+					(par défaut c'est uniquement sur le name) -->
 
 					<field name="fields_Title"/>
 					<field name="auteur_ids"/>
-					<field name="fields_Screen_cover"/>
 					<field name="fields_Publishing_date"/>
 					<field name="fields_Editing"/>
 					<field name="fields_Page_count"/>
@@ -112,12 +104,11 @@
 		</record>
 
 
-		<!-- VUE KANBAN -->
+		<!--===================================================================================================KANBAN-->
 		<record id="bib_book_view_kanban" model="ir.ui.view">
 			<field name="name">book.kanban</field>
 			<field name="model">bib.book</field>
-			<!-- Pas de field type ? -->
-
+			<field name="type">kanban</field>
 			<field name="arch" type="xml">
 				<kanban>
 					<!-- On défini les champs que l'on va utiliser -->
@@ -158,8 +149,10 @@
 		</record>
 
 
-
-
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<!-- !!N'est plus utilisée car on utilise res.lang de Odoo !! -->
+<!-- Je la laisse car il y a un smart button :)               -->
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- Vue langue -->
 		<!-- form -->
 		<record id="bib_langue_form" model="ir.ui.view">
@@ -209,56 +202,7 @@
 			</field>
 		</record>
 
-<!-- Record/action -->
-		<!-- Record/action book -->
-		<record id="bib_book_action" model="ir.actions.act_window">
-			<field name="name">Book</field>
-			<field name="res_model">bib.book</field>
-			<field name="view_mode">kanban,tree,form</field>
-		</record>
 
-
-		<!-- Record/Action Langue -->
-		<record id="bib_book_afficher_langue" model="ir.actions.act_window">
-
-			<field name="name">Langue</field>
-			<!-- Ressource model : bib.langue-->
-			<field name="res_model">bib.langue</field>
-			<!-- View mode (quelle vue on veut afficher sans espace entre les ,)-->
-			<field name="view_mode">tree,form</field>
-
-		</record>
-
-		<record id="bib_genre_afficher_genre" model="ir.actions.act_window" >
-			<field name="name">Genre</field>
-			<field name="res_model">bib.genre</field>
-			<field name="view_mode">tree,form</field>
-		</record>
-
-		<record id="bib_localisation_afficher_localisation" model="ir.actions.act_window">
-			<field name="name">Localisation</field>
-			<field name="res_model">bib.localisation</field>
-			<field name="view_mode">tree,form</field>
-		</record>
-
-		<record id="bib_shelf_afficher_etagere" model="ir.actions.act_window" > 
-			<field name="name">Etagere </field>
-			<field name="res_model">bib.shelf</field>
-			<field name="view_mode">tree,form</field>
-		</record>
-
-
-
-<!-- Menu dans la barre de navigation -->
-		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'/>
-		<menuitem id="book_first_level" name="Boukin" parent="book_root"/>
-		<menuitem id="book_menu_action" action="bib_book_action" parent="book_first_level" />
-		<menuitem id="book_menu_langue" action="bib_book_afficher_langue" parent="book_first_level"/>
-		<menuitem id="book_menu_genre" action="bib_genre_afficher_genre" parent="book_first_level" />
-		<menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" name="Localité" parent="book_root" />
-		<menuitem id="book_menu_etagere" action="bib_shelf_afficher_etagere" name="Etagere" parent="book_root" />
-		<!-- action lier à la localisation -->
-		<!-- <menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" parent="book_first_level"/> -->
 
 
 

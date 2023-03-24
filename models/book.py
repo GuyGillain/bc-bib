@@ -7,20 +7,20 @@ class BookModel(models.Model):
 
     fields_Title = fields.Char(
         string="Titre",
-        require="True",
+        required=True,
         help="Le titre du livre",
         index="True"
     )
 
     fields_Screen_cover = fields.Binary(
         string="Photo de la couverture",
-        require="True",
+        required=False,
         attachment="True"
     )
 
     fields_Publishing_date = fields.Date(
         string="Date de publication",
-        require="True"
+        required=True
     )
 
     fields_Editing = fields.Selection(
@@ -28,37 +28,37 @@ class BookModel(models.Model):
         selection=[
             ('1', '1ere'), ('2', '2eme'), ('3', '3eme'), ('4', '4eme'), ('5', 'Xeme')
         ],
-        require="True",
+        required=True,
         help="Faite le choix de l\'édition"
     )
 
     fields_Page_count = fields.Integer(
         string="Nombre de pages",
-        require="True"
+        required=True
     )
 
     fields_Bar_code = fields.Integer(
-        string="code Barrrrreeee",
+        string="code Barre",
         require="True"
     )
 
     fields_ISBN = fields.Char(
         string="Code ISBN",
-        require="True",
+        required=False,
         size=50
     )
 
     fields_Format = fields.Selection(
         string="Format",
-        require="True",
+        required=True,
         selection=[
             ('1', 'Papier'), ('2', 'Numérique')
         ]
     )
 
     fields_Pice = fields.Float(
-        string="Prixxxxxx",
-        require="True"
+        string="Prix",
+        required=True
     )
 
 
@@ -71,7 +71,8 @@ class BookModel(models.Model):
     langue_id = fields.Many2one(
         comodel_name="res.lang",
         domain=['|', ('active', '=', False), ("active", "=", True)],
-        string="langue"
+        string="langue",
+        required=True
     )
     
 
@@ -81,7 +82,7 @@ class BookModel(models.Model):
         string="Evaluation"
     )
 
-    genre_id = fields.Many2one(
+    genre_id = fields.Many2many(
         comodel_name="bib.genre",
         string="Genre"
     )
@@ -92,5 +93,6 @@ class BookModel(models.Model):
 
     shelf = fields.Many2one(
         comodel_name="bib.shelf",
-        string="Etagère"
+        string="Etagère",
+        required=True
     )

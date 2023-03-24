@@ -9,8 +9,7 @@
 			<field name="arch" type="xml">
 				<tree string="Localisation">
 					<field name="fields_Location"/>
-					<field name="name"/>
-					<field name="fields_Shelf"/>
+					<field name="ids_biblio"/>
 				</tree>
 			</field>
 		</record>
@@ -25,8 +24,7 @@
 					<sheet>
 						<group>
 							<field name="fields_Location"/>
-							<field name="name"/>
-							<field name="fields_Shelf"/>
+							<field name="ids_biblio"/>
 						</group>
 					</sheet>
 				</form>

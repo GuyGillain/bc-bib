@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<data>
+
+<!-- ===================================================================================================Record/action-->
+		<!--                                                                Affichage des livres -->
+		<record id="bib_book_action" model="ir.actions.act_window">
+			<field name="name">Livre</field>
+			<field name="res_model">bib.book</field>
+			<field name="view_mode">kanban,tree,form</field>
+		</record>
+		<!--                                                                Affichage des genres -->
+		<record id="bib_genre_afficher_genre" model="ir.actions.act_window" >
+			<field name="name">Genre</field>
+			<field name="res_model">bib.genre</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!--                                                         Affichage des localisations -->
+		<record id="bib_localisation_afficher_localisation" model="ir.actions.act_window">
+			<field name="name">Localisation</field>
+			<field name="res_model">bib.localisation</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<!--                                                               Affichage des etagère -->
+		<record id="bib_shelf_afficher_etagere" model="ir.actions.act_window" > 
+			<field name="name">Etagere </field>
+			<field name="res_model">bib.shelf</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+
+<!-- ================================================================================Menu dans la barre de navigation-->
+		<menuitem id="book_root" name="Book" web_icon='bc-bib,static/description/icon.png'/>
+
+		<menuitem id="book_first_item" name="Livre" parent="book_root"/>
+		<menuitem id="book_menu_action" action="bib_book_action" parent="book_first_item" />
+		<menuitem id="book_menu_genre" action="bib_genre_afficher_genre" parent="book_first_item" />
+		
+		<menuitem id="book_second_item" name="Localisation" parent="book_root" />
+		<menuitem id="book_menu_localisation" action="bib_localisation_afficher_localisation" name="Localité" parent="book_second_item" />
+		<menuitem id="book_menu_etagere" action="bib_shelf_afficher_etagere" name="Etagère" parent="book_second_item" />
+
+
+
+
+
+	</data>
+</odoo>
