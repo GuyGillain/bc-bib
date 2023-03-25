@@ -3,21 +3,8 @@ from odoo import fields, models
 # Essais legacy
 
 class BookModel(models.Model):
-    _name = "bib.book"
+    _inherit = 'product.template'
     _description = "Model concernant les livres"
-
-    fields_Title = fields.Char(
-        string="Titre",
-        required=True,
-        help="Le titre du livre",
-        index="True"
-    )
-
-    fields_Screen_cover = fields.Binary(
-        string="Photo de la couverture",
-        required=False,
-        attachment="True"
-    )
 
     fields_Publishing_date = fields.Date(
         string="Date de publication",
@@ -33,22 +20,6 @@ class BookModel(models.Model):
         help="Faite le choix de l\'édition"
     )
 
-    fields_Page_count = fields.Integer(
-        string="Nombre de pages",
-        required=True
-    )
-
-    fields_Bar_code = fields.Integer(
-        string="code Barre",
-        require="True"
-    )
-
-    fields_ISBN = fields.Char(
-        string="Code ISBN",
-        required=False,
-        size=50
-    )
-
     fields_Format = fields.Selection(
         string="Format",
         required=True,
@@ -57,10 +28,6 @@ class BookModel(models.Model):
         ]
     )
 
-    fields_Pice = fields.Float(
-        string="Prix",
-        required=True
-    )
 
     langue_id = fields.Many2one(
         comodel_name="res.lang",
