@@ -33,7 +33,7 @@ class Shelf(models.Model):
     )
 
     books = fields.One2many(
-        comodel_name="bib.book",
+        comodel_name="product.template",
         inverse_name="shelf",
         string="Livres"
     )

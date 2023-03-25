@@ -18,7 +18,7 @@ class evaluation(models.Model):
 	)
 
 	ids_book = fields.Many2one(
-		comodel_name="bib.book",
+		comodel_name="product.template",
 		inverse_name="evaluation_id",
 		string="Book_id"
 	)
