@@ -32,11 +32,7 @@ class langue(models.Model) :
         required="True"
    )
 
-   ids_book = fields.One2many(
-      comodel_name="bib.book",
-      inverse_name="langue_id",
-      string="Nombre"
-   )
+
 
    count_book = fields.Integer(
       string="Nombre de bouquins",
