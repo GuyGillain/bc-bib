@@ -4,7 +4,7 @@
     "Version": "15.0.0",
     "author": "Delire - Gillain - Varlet",
     "website": "",
-    "depends": ["base"],
+    "depends": ["base","website_sale"],
     "data":
         [
             'views/menuitems.xml',
@@ -14,6 +14,7 @@
             'views/library.xml',
             'views/shelf.xml',
             'security/ir.model.access.csv',
+            
         ],
     "installable": True,
     'images': ['static/description/icon.png'],
