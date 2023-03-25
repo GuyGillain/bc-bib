@@ -8,6 +8,7 @@
 			<field name="name">Livre</field>
 			<field name="res_model">product.template</field>
 			<field name="view_mode">tree,form</field>
+			<field name="context">{'tree_view_ref':'ceciestunique_tree', 'form_view_ref':'ceciestunique_form'}</field>
 		</record>
 		<!--                                                                Affichage des genres -->
 		<record id="bib_genre_afficher_genre" model="ir.actions.act_window" >
