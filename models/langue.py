@@ -9,7 +9,7 @@ class langue(models.Model) :
       # Equivalent query SQL
       "type": "ir.actions.act_window",
       # Dans quelle table
-      "res_model": "bib.book",
+      "res_model": "product.template",
       # Clause WHERE
       "domain": [("langue_id", "=", self.id)],
 
