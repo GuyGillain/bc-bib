@@ -15,9 +15,6 @@
 					<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
 					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 					<field name="fields_Publishing_date"/>
-					<field name="fields_Editing"/>
-					<field name="fields_Format" widget="badge"/>
-					<field name="langue_id"/>
 					<field name="evaluation_id" widget="many2many_tags"/>
 				</tree>
 			</field>
@@ -37,9 +34,6 @@
 							<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
 							<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 							<field name="fields_Publishing_date"/>
-							<field name="fields_Editing"/>
-							<field name="fields_Format" widget="badge"/>
-							<field name="langue_id"/>
 							<field name="evaluation_id" widget="many2many_tags"/>
 						</group>
 					</sheet>
@@ -124,7 +118,7 @@
 							<button class="oe_stat_button" name="books_by_languages" type="object" icon="fa-book">
 								<div class="o_stat_info">
 									<span class="o_stat_value">
-										<field name="count_book" />
+										<!--<field name="count_book" />-->
 									</span>
 									<span class="o_stat_text">
 										Livres
@@ -134,9 +128,9 @@
 
 						</div>
 						<group>
-							<field name="Fields_langue" />
-							<field name="ids_book" />
-							<field name="count_book" />
+							<!--<field name="Fields_langue" />-->
+							<!--<field name="ids_book" />-->
+							<!--<field name="count_book" />-->
 						</group>
 					</sheet>
 				</form>
@@ -150,8 +144,8 @@
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Langue">
-					<field name="Fields_langue" />
-					<field name="ids_book" />
+					<!--<field name="Fields_langue" />-->
+					<!--<field name="ids_book" />-->
 				</tree>
 			</field>
 		</record>
