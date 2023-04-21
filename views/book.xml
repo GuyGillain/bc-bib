@@ -8,15 +8,21 @@
 		<record id="bib_book_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
 			<field name="model">product.template</field>
+			<!--Héritage de la vue par défaut -->
+			<field name="inherit_id" ref="product.product_template_tree_view"/>
+			<field name="mode">primary</field>
+
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="Book">
-					<field name="auteur_ids" widget="many2many_tags"/>
-					<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
-					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
-					<field name="fields_Publishing_date"/>
-					<field name="evaluation_id" widget="many2many_tags"/>
-				</tree>
+				<!-- Le xpath permet de rechercher dans la vue d'origine un élément,
+				ici il est configuré pour rechercher le tree d'origine et rajouter nos champs -->
+				<xpath expr="//tree" position="inside">
+						<field name="auteur_ids" widget="many2many_tags"/>
+						<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
+						<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
+						<field name="fields_Publishing_date"/>
+						<field name="evaluation_id" widget="many2many_tags"/>
+				</xpath>
 			</field>
 		</record>
 

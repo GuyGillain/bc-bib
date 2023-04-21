@@ -1,5 +1,5 @@
 from odoo import fields, models
-#salut les gars
+
 # Essais legacy
 
 class BookModel(models.Model):
