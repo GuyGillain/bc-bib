@@ -101,7 +101,30 @@
 
 		<!--===================================================================================================KANBAN-->
 		
-
+		<record id="bib_book_kanban" model="ir.ui.view">
+			<field name="name">book.kanban</field>
+			<field name="model">product.template</field>
+			<field name="type">kanban</field>
+			<field name="arch" type="xml">
+				<kanban>
+    				<templates>
+    				    <t t-name="kanban_box">
+    				        <div class="flipster">
+    				            <ul>
+    				                <t t-foreach="records" t-as="record">
+    				                    <li>
+    				                        <div class="flip-content">
+    				                            <img t-att-src="record.image" />
+    				                        </div>
+    				                    </li>
+    				                </t>
+    				            </ul>
+    				        </div>
+    				    </t>
+    				</templates>
+				</kanban>
+			</field>
+		</record>
 
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- !!N'est plus utilisée car on utilise res.lang de Odoo !! -->
