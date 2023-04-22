@@ -20,6 +20,10 @@
     "application": True,
     "sequence":-100,
     "assets" : {
-    'web.assets_backend' : ['web/static/lib/*']
+    'web.assets_backend' : [
+        'bc-bib/web/static/lib/jquery.flipster.css',
+        'bc-bib/web/static/lib/jquery.flipster.min.js',
+        'bc-bib/web/static/lib/boot_flipster.js',
+        ]
     }
 }

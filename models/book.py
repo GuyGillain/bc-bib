@@ -31,3 +31,9 @@ class BookModel(models.Model):
         string="Etagère",
         required=True
     )
+    
+    # Booleén qui permet de filtrer uniquement les livres
+    is_book = fields.Boolean(
+        string="Est-ce un livre",
+        default=False
+    )

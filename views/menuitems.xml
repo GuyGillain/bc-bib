@@ -7,18 +7,24 @@
 		<record id="bib_book_action" model="ir.actions.act_window">
 			<field name="name">Livre</field>
 			<field name="res_model">product.template</field>
-			<field name="view_mode">tree,form</field>
-			<!-- <field name="view_id" ref="bib_book_tree_view"/> -->
-			<field name="context" >{'tree_view_ref':'bc-bib.bib_book_tree_view','form_view_ref':'bc-bib.bib_book_form_view'}</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<!-- Le contexte sert à spécifier que l'on veut notre vue custom et unique -->
+			<field name="context" >{'tree_view_ref':'bc-bib.bib_book_tree_view','form_view_ref':'bc-bib.bib_book_form_view', 'kanban_view_ref':'bc-bib.bib_book_kanban'}</field>
+			<field name="domain">[('is_book', '=', True)]</field>
 		</record>
+		
 		<!--on écrase l'action de base d odoo-->
+		<!--Il est nécessaire de redéfinir l'action de base d'odoo, car la vue de base était aussi modifiée -->
+		<!--Ce qu'on ne veut pas, car les livres sont désormait des articles mais les autres articles ne -->
+		<!--pas forcément des livres... Et donc les vues sont différentes-->
 		<record id="sale.product_template_action" model="ir.actions.act_window">			
 			<field name="name">Articles</field>
 			<field name="res_model">product.template</field>
 			<field name="view_mode">kanban,tree,form,activity</field>
-			<!-- <field name="view_id" ref="bib_book_tree_view"/> -->
 			<field name="context" >{"search_default_filter_to_sell":1, "sale_multi_pricelist_product_template": 1,'tree_view_ref':'product.product_template_tree_view'}</field>
 		</record>
+		<!--=============================================== -->
+		
 		<!--		                                                                Affichage des genres -->
 		<record id="bib_genre_afficher_genre" model="ir.actions.act_window" >
 			<field name="name">Genre</field>

@@ -10,7 +10,6 @@
 			<field name="model">product.template</field>
 			<!--Héritage de la vue par défaut -->
 			<field name="inherit_id" ref="product.product_template_tree_view"/>
-			<field name="mode">primary</field>
 
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
@@ -23,6 +22,7 @@
 						<field name="fields_Publishing_date"/>
 						<field name="evaluation_id" widget="many2many_tags"/>
 				</xpath>
+
 			</field>
 		</record>
 
@@ -34,31 +34,29 @@
 			<field name="type">form</field>
 			<field name="inherit_id" ref="product.product_template_form_view"/>
 			<field name="arch" type="xml">
-				<!-- Dans ce cas ci, on utilise pas le xpath (on pourrait) mais une utilise une autre méthode pour
+				<!-- Dans ce cas ci, on utilise pas le xpath (on pourrait) mais on utilise une autre méthode pour
 				cibler la ou on veut injecter nos champs dans la vue héritée -->
 				<!-- L'exemple du xpath pourrait être xpath expr="page[@name='general_information']" position="inside" -->
 				<group name="group_general"  position="after">
 					<group>
 					<field name="auteur_ids" widget="many2many_tags"/>
-					<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
+					<field name="shelf"/>
 					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 					<field name="fields_Publishing_date"/>
 					<field name="evaluation_id" widget="many2many_tags"/>
+
+					<field name="is_book" invisible="0" default="1"/>
+					
 					</group>
+
 				</group>
-				<!-- fenetre anciennement créer par nos soins  -->
-				<!-- <form string="Book">
-					<sheet>
-						<group>
-							<field name="auteur_ids" widget="many2many_tags"/>
-							<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
-							<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
-							<field name="fields_Publishing_date"/>
-							<field name="evaluation_id" widget="many2many_tags"/>
-						</group>
-					</sheet>
-				</form>
-				 -->
+
+				<xpath expr="//field[@name='name']" position="replace">
+					<field class="text-break" name="name" placeholder="Titre du livre"/>
+				</xpath>
+				
+
+
 			</field>
 		</record>
 
@@ -116,6 +114,7 @@
 
 		<!--===================================================================================================KANBAN-->
 		
+		<!-- Lourdement modifiée par du JS :) -->
 		<record id="bib_book_kanban" model="ir.ui.view">
 			<field name="name">book.kanban</field>
 			<field name="model">product.template</field>
@@ -123,24 +122,21 @@
 			<field name="arch" type="xml">
 				<kanban>
     				<templates>
-    				    <t t-name="kanban_box">
-    				        <div class="flipster">
-    				            <ul>
-    				                <t t-foreach="records" t-as="record">
-    				                    <li>
-    				                        <div class="flip-content">
-    				                            <img t-att-src="record.image" />
-    				                        </div>
-    				                    </li>
-    				                </t>
-    				            </ul>
-    				        </div>
-    				    </t>
+    				    <t t-name="kanban-box">
+                        	<div class="oe_kanban_global_click">
+                        	    <field name="image_512" widget="image" />
+                        	</div>
+                    	</t>
     				</templates>
 				</kanban>
 			</field>
 		</record>
 
+
+
+
+
+<!--=================================================================================-->
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- !!N'est plus utilisée car on utilise res.lang de Odoo !! -->
 <!-- Je la laisse car il y a un smart button :)               -->
@@ -194,7 +190,7 @@
 			</field>
 		</record>
 
-
+<!--=================================================================================-->
 
 
 
