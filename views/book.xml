@@ -8,18 +8,21 @@
 		<record id="bib_book_tree_view" model="ir.ui.view">
 			<field name="name">book.tree</field>
 			<field name="model">product.template</field>
+			<!--Héritage de la vue par défaut -->
+			<field name="inherit_id" ref="product.product_template_tree_view"/>
+			<field name="mode">primary</field>
+
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
-				<tree string="Book">
-					<field name="auteur_ids" widget="many2many_tags"/>
-					<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
-					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
-					<field name="fields_Publishing_date"/>
-					<field name="fields_Editing"/>
-					<field name="fields_Format" widget="badge"/>
-					<field name="langue_id"/>
-					<field name="evaluation_id" widget="many2many_tags"/>
-				</tree>
+				<!-- Le xpath permet de rechercher dans la vue d'origine un élément,
+				ici il est configuré pour rechercher le tree d'origine et rajouter nos champs -->
+				<xpath expr="//tree" position="inside">
+						<field name="auteur_ids" widget="many2many_tags"/>
+						<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
+						<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
+						<field name="fields_Publishing_date"/>
+						<field name="evaluation_id" widget="many2many_tags"/>
+				</xpath>
 			</field>
 		</record>
 
@@ -37,9 +40,6 @@
 							<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
 							<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
 							<field name="fields_Publishing_date"/>
-							<field name="fields_Editing"/>
-							<field name="fields_Format" widget="badge"/>
-							<field name="langue_id"/>
 							<field name="evaluation_id" widget="many2many_tags"/>
 						</group>
 					</sheet>
@@ -101,7 +101,30 @@
 
 		<!--===================================================================================================KANBAN-->
 		
-
+		<record id="bib_book_kanban" model="ir.ui.view">
+			<field name="name">book.kanban</field>
+			<field name="model">product.template</field>
+			<field name="type">kanban</field>
+			<field name="arch" type="xml">
+				<kanban>
+    				<templates>
+    				    <t t-name="kanban_box">
+    				        <div class="flipster">
+    				            <ul>
+    				                <t t-foreach="records" t-as="record">
+    				                    <li>
+    				                        <div class="flip-content">
+    				                            <img t-att-src="record.image" />
+    				                        </div>
+    				                    </li>
+    				                </t>
+    				            </ul>
+    				        </div>
+    				    </t>
+    				</templates>
+				</kanban>
+			</field>
+		</record>
 
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <!-- !!N'est plus utilisée car on utilise res.lang de Odoo !! -->
@@ -124,7 +147,7 @@
 							<button class="oe_stat_button" name="books_by_languages" type="object" icon="fa-book">
 								<div class="o_stat_info">
 									<span class="o_stat_value">
-										<field name="count_book" />
+										<!--<field name="count_book" />-->
 									</span>
 									<span class="o_stat_text">
 										Livres
@@ -134,9 +157,9 @@
 
 						</div>
 						<group>
-							<field name="Fields_langue" />
-							<field name="ids_book" />
-							<field name="count_book" />
+							<!--<field name="Fields_langue" />-->
+							<!--<field name="ids_book" />-->
+							<!--<field name="count_book" />-->
 						</group>
 					</sheet>
 				</form>
@@ -150,8 +173,8 @@
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Langue">
-					<field name="Fields_langue" />
-					<field name="ids_book" />
+					<!--<field name="Fields_langue" />-->
+					<!--<field name="ids_book" />-->
 				</tree>
 			</field>
 		</record>
