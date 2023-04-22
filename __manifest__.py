@@ -7,13 +7,14 @@
     "depends": ["base","website_sale"],
     "data":
         [
+            'views/menuitems.xml',
             'views/genre.xml',
             'views/book.xml',
             'views/localisation.xml',
             'views/library.xml',
             'views/shelf.xml',
             'security/ir.model.access.csv',
-            'views/menuitems.xml'
+            
         ],
     "installable": True,
     'images': ['static/description/icon.png'],
