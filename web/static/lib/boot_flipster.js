@@ -39,6 +39,10 @@ window.addEventListener('load', () => {
     // Ajouter chaque div stockée à l'intérieur des divs "flipster" sous forme d'éléments de liste
     for (let j = 0; j < divContents.length; j++) {
       const newDiv = document.createElement('div');
+      //liste des class oe_kanban_card oe_kanban_global_click o_kanban_record
+      newDiv.classList.add("oe_kanban_global_click");
+      newDiv.classList.add("oe_kanban_card");
+      newDiv.classList.add("o_kanban_record");
       newDiv.classList.add("oe_kanban_global_click");
       newDiv.setAttribute("modifiers", "{}");
       newDiv.setAttribute("tabindex", "0");
