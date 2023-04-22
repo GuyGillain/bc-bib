@@ -9,10 +9,10 @@
 			<field name="res_model">product.template</field>
 			<field name="view_mode">tree,form</field>
 			<!-- <field name="view_id" ref="bib_book_tree_view"/> -->
-			<field name="context" >{'tree_view_ref':'bc-bib.bib_book_tree_view'}</field>
+			<field name="context" >{'tree_view_ref':'bc-bib.bib_book_tree_view','form_view_ref':'bc-bib.bib_book_form_view'}</field>
 		</record>
 		<!--on écrase l'action de base d odoo-->
-		<record id="sale.product_template_action" model="ir.actions.act_window">
+		<record id="sale.product_template_action" model="ir.actions.act_window">			
 			<field name="name">Articles</field>
 			<field name="res_model">product.template</field>
 			<field name="view_mode">kanban,tree,form,activity</field>

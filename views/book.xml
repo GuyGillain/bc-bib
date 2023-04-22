@@ -32,8 +32,19 @@
 			<field name="name">book.form</field>
 			<field name="model">product.template</field>
 			<field name="type">form</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
 			<field name="arch" type="xml">
-				<form string="Book">
+				<group name="group_general"  position="after">
+					<group>
+					<field name="auteur_ids" widget="many2many_tags"/>
+					<field name="shelf" widget="badge" options="{'color_field': 'color'}"/>
+					<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
+					<field name="fields_Publishing_date"/>
+					<field name="evaluation_id" widget="many2many_tags"/>
+					</group>
+				</group>
+				<!-- fenetre anciennement créer par nos soins  -->
+				<!-- <form string="Book">
 					<sheet>
 						<group>
 							<field name="auteur_ids" widget="many2many_tags"/>
@@ -44,6 +55,7 @@
 						</group>
 					</sheet>
 				</form>
+				 -->
 			</field>
 		</record>
 
