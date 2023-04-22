@@ -13,10 +13,13 @@
             'views/library.xml',
             'views/shelf.xml',
             'security/ir.model.access.csv',
-            'views/menuitems.xml'
+            'views/menuitems.xml',
         ],
     "installable": True,
     'images': ['static/description/icon.png'],
     "application": True,
-    "sequence":-100
+    "sequence":-100,
+    "assets" : {
+    'web.assets_backend' : ['web/static/lib/*']
+    }
 }
