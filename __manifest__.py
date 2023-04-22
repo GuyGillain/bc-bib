@@ -24,6 +24,7 @@
         'bc-bib/web/static/lib/jquery.flipster.css',
         'bc-bib/web/static/lib/jquery.flipster.min.js',
         'bc-bib/web/static/lib/boot_flipster.js',
+        'bc-bib/web/static/lib/signature.js',
         ]
     }
 }
