@@ -9,14 +9,14 @@ window.addEventListener('load', () => {
       if (spanElement && spanElement.textContent === "Livre") {
         // Si les conditions sont remplies et que la fonction n'a pas encore été exécutée, exécuter la fonction et marquer comme exécutée
         if (!executed) {
-          maFonction();
+          bootFlipster();
           executed = true;
         }
       }
     }
   }, 1000); // Répéter toutes les secondes
 
-  function maFonction() {
+  function bootFlipster() {
     console.log("Chargement du flipster!");
     // Récupérer toutes les divs avec la classe "oe_kanban_global_click"
     const divs = document.querySelectorAll('.oe_kanban_global_click');
@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
       const newDiv = document.createElement('div');
       //liste des class oe_kanban_card oe_kanban_global_click o_kanban_record
       newDiv.classList.add("oe_kanban_global_click");
-      newDiv.classList.add("oe_kanban_card");
+      //newDiv.classList.add("oe_kanban_card");
       newDiv.classList.add("o_kanban_record");
       newDiv.classList.add("oe_kanban_global_click");
       newDiv.setAttribute("modifiers", "{}");
@@ -59,5 +59,6 @@ window.addEventListener('load', () => {
 
     // Initialisation du flipster
     $('.flipster').flipster();
+
   }
 });
