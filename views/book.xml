@@ -115,6 +115,7 @@
 		<!--===================================================================================================KANBAN-->
 		
 		<!-- Lourdement modifiée par du JS :) -->
+		<!-- y a un petit flipster qui s'affiche en haut-->
 		<record id="bib_book_kanban" model="ir.ui.view">
 			<field name="name">book.kanban</field>
 			<field name="model">product.template</field>
@@ -124,7 +125,24 @@
     				<templates>
     				    <t t-name="kanban-box">
                         	<div class="oe_kanban_global_click">
-                        	    <field name="image_512" widget="image" />
+
+                        	  	<div style="font-weight:bold;border:2px solid rgba(0,0,0,0.4); display:inline-block; padding:2px 5px; border-radius:15px; background-color:white; position:relative; top:30px; z-index:5;">
+                        	      	<field name="list_price"/>
+                        	      	<field name="currency_id"/>
+                        	  	</div>
+
+                        	    <!--Important de la garder, car le flipster se sert d'elle pour avoir des images-->
+                        	    <field name="image_512" widget="image"/>
+
+                        	    <div style="text-align:center;font-weight:bold;font-size:120%;"><field name="name"/></div>
+                        	    <div>
+                        	    	Genre : 
+                        	      	<field name="genre_id" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        	    </div>
+                        	    <div>
+                        	       	Auteur(s) : 
+                        	    	<field name="auteur_ids" widget="many2many_tags"/>
+                        	    </div>
                         	</div>
                     	</t>
     				</templates>
