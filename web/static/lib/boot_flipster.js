@@ -27,26 +27,28 @@ window.addEventListener('load', () => {
       divContents.push(divs[i].innerHTML);
     }
 
-    // Vider le contenu de la div avec la classe "o_content"
-    const contentDiv = document.querySelector('.o_content');
-    contentDiv.innerHTML = '';
+    // Filtrage des éléments récupérés pour ne garder que les images (nouvelle version)
+    for (let k=0; k<divContents.length; k++) {
+      let chaine = divContents[k];
+      let deb = chaine.indexOf("<img");
+      let fin = chaine.indexOf(">", deb);
+      let portion = chaine.substring(deb, fin);
+      // Redimensionnement des images
+      portion = portion + 'style = "max-height:175px;width:auto;">'
+      divContents[k] = portion;
+    }
 
     // Créer une div avec la classe "flipster" et une liste non ordonnée à l'intérieur
     const flipsterDiv = document.createElement('div');
     flipsterDiv.classList.add('flipster');
+    flipsterDiv.style.maxHeight = "205px";
+    flipsterDiv.style.marginTop = "10px";
+    flipsterDiv.style.overflowY = 'hidden';
     const ul = document.createElement('ul');
 
     // Ajouter chaque div stockée à l'intérieur des divs "flipster" sous forme d'éléments de liste
     for (let j = 0; j < divContents.length; j++) {
       const newDiv = document.createElement('div');
-      //liste des class oe_kanban_card oe_kanban_global_click o_kanban_record
-      newDiv.classList.add("oe_kanban_global_click");
-      //newDiv.classList.add("oe_kanban_card");
-      newDiv.classList.add("o_kanban_record");
-      newDiv.classList.add("oe_kanban_global_click");
-      newDiv.setAttribute("modifiers", "{}");
-      newDiv.setAttribute("tabindex", "0");
-      newDiv.setAttribute("role", "article");
       newDiv.innerHTML = divContents[j];
       const li = document.createElement('li');
       li.appendChild(newDiv);
@@ -55,10 +57,19 @@ window.addEventListener('load', () => {
 
     // Ajouter la liste à la div "flipster" et la div "flipster" à la div "o_content"
     flipsterDiv.appendChild(ul);
-    contentDiv.appendChild(flipsterDiv);
+
+    // Ajout de la div flipster avant la div class="o_kanban_view"
+    divKanbanView = document.querySelector(".o_kanban_view");
+    divOContent = document.querySelector(".o_content");
+
+    divOContent.insertBefore(flipsterDiv, divKanbanView);
 
     // Initialisation du flipster
-    $('.flipster').flipster();
+    $('.flipster').flipster({
+      autoplay: 3000,
+      loop: true,
+      spacing: -0.6
+    });
 
   }
 });
