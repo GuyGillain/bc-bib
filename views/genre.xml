@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <data>
-
+<!-- ====================================================================Tree-->
         <record id="bib_genre_tree_view" model="ir.ui.view">
 
 			<field name="name">genre.tree</field>	
@@ -16,8 +16,8 @@
 			</field>
 		
 		</record>
-
-		<record id="bib_genre_tree_view" model="ir.ui.view">
+<!-- ====================================================================form-->
+		<record id="bib_genre_form_view" model="ir.ui.view">
 			<field name="name">genre.tree</field>	
             <field name="model">bib.genre</field>
 			<field name="type">form</field>

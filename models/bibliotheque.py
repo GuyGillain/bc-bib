@@ -36,7 +36,7 @@ class Bibliotheque(models.Model):
 
     # Champ calculé automatiquement
 	counted = fields.Integer(
-    	string="Nombre de livre dans la bibliothèque",
+    	string="Nombre de livre(s) dans la bibliothèque",
     	compute=_count_number_book,
     	store=True
     )

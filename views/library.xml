@@ -10,9 +10,9 @@
 				<tree string="Bibliothèque">
 					<field name="name"/>
 					<field name="counted"/>
-					<field name="shelf_id"/>
+					<field name="shelf_id" widget="many2many_tags"/>
 					<field name="localisation_id"/>
-					<field name="color"/>
+					<field name="color" widget="color_picker"/>
 				</tree>
 			</field>
 		</record>
